@@ -19,7 +19,7 @@
 
 - Install Python 3.6.9 (or higher) and awscli version 2.
 
-- The scripts included in the repo are idempotent. 
+- The scripts are idempotent. 
 
 ## [Prerequisites](#Prerequisites)
 
