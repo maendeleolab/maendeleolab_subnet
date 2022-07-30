@@ -77,9 +77,11 @@ deploy_NetworkDev1.py
 maendeleolab_lib.py
 ```
 
-**6**  - I recommend running the script **NetworkDev1.py** to see what the expected results look like. 
+**6**  - I recommend running the script **NetworkDev1.py** to see what the expected results look like.
 
-It will create a subnet in two availability zones in us-east-1 and us-east-2 with their respective CIDR ranges.
+**Notes: Your VPC must be tagged with the name "NetworkDev1" for the script to work, otherwise replace NetworkDev1 with youe VPC name.**
+
+The script will create a subnet in two availability zones in us-east-1 and us-east-2 with their respective CIDR ranges.
 
 This script will become your single source of truth for your subnets. 
 
