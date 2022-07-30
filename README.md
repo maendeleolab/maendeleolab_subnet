@@ -29,8 +29,6 @@
 
 - I recommend dedicating an instance (or on-premises server) to programmatically run the scripts.  
 
-- AWS CLI --profile option is not used for simplicity. 
-
 - Assign a role with programmatic access to the instance/server default profile.
 
 - Run this command 'export ENV_FPATH="folder-path" ' 
