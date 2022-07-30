@@ -1,0 +1,118 @@
+# maendeleolab_vpc
+![GitHub commit activity](https://img.shields.io/github/last-commit/maendeleolab/maendeleolab_vpc)
+
+<img src="/images/banner.png" width=400>
+
+```
+├── build_subnet.py
+├── delete_resources.py
+├── deploy_NetworkDev1.py
+├── maendeleolab_lib.py
+└── subnet.log
+```
+
+## [Context](#Context)
+
+- This repo was built to create subnets for a VPC. 
+
+- It can be used on any Linux environment in AWS or on-premises. 
+
+- Install Python 3.6.9 (or higher) and awscli version 2.
+
+- The scripts included in the repo are idempotent. 
+
+## [Prerequisites](#Prerequisites)
+
+- It helps to be familiar with Linux basics commands.
+
+- Must have awscli version 2 and Python 3.6.9 (or higher) installed.
+
+- I recommend dedicating an instance (or on-premises server) to programmatically run the scripts.  
+
+- AWS CLI --profile option is not used for simplicity. 
+
+- Assign a role with programmatic access to the instance/server default profile.
+
+- Run this command 'export ENV_FPATH="folder-path" ' 
+
+- Replace folder-path with your folder location (this the folder, where you will download the repo). 
+
+See the example below.
+
+```
+export ENV_FPATH="/home/ubuntu"
+```
+
+## [Walk-through](#Walk-through)
+
+**1**  - Make sure to comply with the prerequisites mentioned above.
+
+**2**  - Update and install the latest packages of your Linux distribution system.
+
+**3**  - Clone this repo to the instance/server using the syntax below.
+
+```
+git clone https://github.com/maendeleolab/maendeleolab_subnet.git
+```
+
+**4**  - cd to folder maendeleolab_subnet
+
+```
+cd maendeleolab_subnet
+```
+
+**5**  - List the files in the folder with the **ls** command. It should match the files below.
+
+**Note:** A file named **subnet.log** will be created to store the scripts logs, when you run the script for the first time.
+
+Remember to use it to monitor your environment or troubleshoot an issue.
+
+```
+README.md
+LICENSE
+images
+build_subnet.py
+delete_resources.py
+deploy_NetworkDev1.py
+maendeleolab_lib.py
+```
+
+**6**  - I recommend running the script **NetworkDev1.py** to see what the expected results look like. 
+
+It will create a subnet in two availability zones in us-east-1 and us-east-2 with their respective CIDR ranges.
+
+This script will become your single source of truth for your subnets. 
+
+```
+./NetworkDev1.py or python3 NetworkDev1.py
+```
+
+**7**  - Verify the expected results are present in the VPC console. 
+
+**8**  - Run the script again to verify idempotency is working as expected. 
+
+**9**  - Subnet resources do not cost you anything, but in case you decide to delete them. You can run the script **delete_resources.py**
+	
+**Note:** The script deletes all the subnet resources that do not have any dependencies. 
+	
+This means, if subnets are not associated to a VPC route table, the subnets will be deleted. 
+
+```
+./delete_resources.py or python3 delete_resources.py
+```
+
+**11** - If you get to this step, congratulations for being brave to do it! 
+
+## [Support](#Support)
+If you find this script useful, please support it with a shout out on your favorite social media platform!
+
+![Twitter](https://img.shields.io/twitter/follow/maendeleolab?style=social)
+```
+Twitter : @maendeleolab
+Instagram : @maendeleolab
+TitTok : @pat_maendeleolab
+```
+## [License](#License)
+GNU GENERAL PUBLIC LICENSE
+
+	

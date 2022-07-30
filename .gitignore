@@ -1,0 +1,8 @@
+#ignore __pycache__
+__pycache__
+
+#log file
+subnet.log
+
+
+
