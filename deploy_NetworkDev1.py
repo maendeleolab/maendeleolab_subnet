@@ -46,8 +46,8 @@ Regions_list=[
 #Creates public subnets
 for subnet, az, region in zip(Public1_subnets_list,AZ1_list,Regions_list):
 	make_subnet(
-				Subnet_name="NetworkDev1_Pub_1a",
-				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), 
+				Subnet_name="NetworkDev1_Public_subnet1", #Public subnet 1 tag name
+				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), #Replace NetworkDev1 with the tag name of your VPC 
 				Tag_key="Type",
 				Tag_value="not-billable",
 				Cidr=subnet,#public1 subnets
@@ -57,8 +57,8 @@ for subnet, az, region in zip(Public1_subnets_list,AZ1_list,Regions_list):
 
 for subnet, az, region in zip(Public2_subnets_list,AZ2_list,Regions_list):
 	make_subnet(
-				Subnet_name="NetworkDev1_Pub_1b",
-				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), 
+				Subnet_name="NetworkDev1_Public_subnet2", #Public subnet 2 tag name
+				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), #Replace NetworkDev1 with the tag name of your VPC
 				Tag_key="Type",
 				Tag_value="not-billable",
 				Cidr=subnet,#public2 subnets
@@ -69,8 +69,8 @@ for subnet, az, region in zip(Public2_subnets_list,AZ2_list,Regions_list):
 #Create private subnets
 for subnet, az, region in zip(Private1_subnets_list,AZ1_list,Regions_list):
 	make_subnet(
-				Subnet_name="NetworkDev1_Priv_1a",
-				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), 
+				Subnet_name="NetworkDev1_Private_subnet1", #Private subnet 1 tag name
+				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), #Replace NetworkDev1 with the tag name of your VPC
 				Tag_key="Type",
 				Tag_value="not-billable",
 				Cidr=subnet,#private1 subnets
@@ -80,8 +80,8 @@ for subnet, az, region in zip(Private1_subnets_list,AZ1_list,Regions_list):
 
 for subnet, az, region in zip(Private2_subnets_list,AZ2_list,Regions_list):
 	make_subnet(
-				Subnet_name="NetworkDev1_Priv_1b",
-				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), 
+				Subnet_name="NetworkDev1_Private_subnet2", #Private subnet 2 tag name
+				Vpc_Id=build_vpc.get_VpcId("NetworkDev1",region), #Replace NetworkDev1 with the tag name of your VPC
 				Tag_key="Type",
 				Tag_value="not-billable",
 				Cidr=subnet,#private2 subnets
