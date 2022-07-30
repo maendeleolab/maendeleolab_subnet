@@ -19,7 +19,9 @@
 
 - Install Python 3.6.9 (or higher) and awscli version 2.
 
-- The scripts are idempotent. 
+- The scripts are idempotent.
+
+- The line above means, if the resource is tagged with a name that already exists, it will not create another one.
 
 ## [Prerequisites](#Prerequisites)
 
