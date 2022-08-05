@@ -25,6 +25,8 @@
 
 ## [Prerequisites](#Prerequisites)
 
+- Please watch the [requirements steps](https://www.youtube.com/watch?v=gMM-d1uZ0Ks&t=12s)
+
 - It helps to be familiar with Linux basics commands.
 
 - Must have awscli version 2 and Python 3.6.9 (or higher) installed.
