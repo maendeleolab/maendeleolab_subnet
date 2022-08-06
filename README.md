@@ -27,6 +27,8 @@
 
 - Please watch the [requirements steps](https://www.youtube.com/watch?v=gMM-d1uZ0Ks&t=12s)
 
+- It is recommended to have [maendeleolab_vpc](https://youtu.be/SCcGe9pr5Z0) before using maendeleolab_subnet
+
 - It helps to be familiar with Linux basics commands.
 
 - Must have awscli version 2 and Python 3.6.9 (or higher) installed.
