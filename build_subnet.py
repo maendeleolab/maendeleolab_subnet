@@ -62,10 +62,9 @@ def erase_subnets(region='us-east-1'):
 		output = os.popen('aws ec2 describe-subnets  --region ' + region).read()
 		subnet_data = json.loads(str(output))
 		for data in subnet_data['Subnets']:
-			for item in data['Tags']:
-				print('Logging: '+ data['SubnetId'])
-				destroy_subnet(data['SubnetId'], region)
-				logging.info('Logging: ' + data['SubnetId'])
+			print(f'Delete: {data["SubnetId"]}...')
+			destroy_subnet(data['SubnetId'], region)
+			logging.info(f'Delete: {data["SubnetId"]}...')
 	except Exception as err:
 		logging.info(err)
 		print('Logging error to subnet.log')
