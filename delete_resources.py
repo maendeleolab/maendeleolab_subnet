@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
-import os, json
-from build_subnet import destroy_subnet, erase_subnets
+from maendeleolab_lib import *
 
-maendeleolab_infra=['us-east-1','us-east-2']
+maendeleolab_infra=['us-east-1','us-west-2']
 
 for region in maendeleolab_infra:
 	erase_subnets(region)
