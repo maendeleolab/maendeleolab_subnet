@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import os, json, sys, pprint, itertools
 from build_subnet import region_id, make_subnet
