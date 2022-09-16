@@ -49,6 +49,17 @@ def get_SubnetId(subnet_name, region='us-east-1'):
 		print('Logging get_SubnetId to subnet.log')
 		logging.info(err)
 
+def get_SubnetCidr(subnet_name, region='us-east-1'):
+	try:
+		''' Gets subnet Cidr from json output and can be used in deploy scripts '''
+		output = os.popen('aws ec2 describe-subnets --filters Name=tag:Name,Values=' + subnet_name + ' --region '+ region).read()
+		subnet_data = json.loads(str(output))
+		data = subnet_data['Subnets'][0]['CidrBlock']
+		return data
+	except Exception as err:
+		print('Logging get_SubnetCidr to subnet.log')
+		logging.info(err)
+
 def destroy_subnet(Subnet_id, region='us-east-1'):
 	try:
 		os.system("aws ec2 delete-subnet --subnet-id " + Subnet_id + ' --region '+ region)
