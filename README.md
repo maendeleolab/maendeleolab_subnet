@@ -49,6 +49,8 @@ export ENV_FPATH="/home/ubuntu"
 
 ## [Walk-through](#Walk-through)
 
+Watch [tutorial](https://youtu.be/YqgJhD8PmJE) on youtube for step by step instructions.
+
 **1**  - Make sure to comply with the prerequisites mentioned above.
 
 **2**  - Update and install the latest packages of your Linux distribution system.
