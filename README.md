@@ -27,7 +27,7 @@
 
 - Please watch the [requirements steps](https://www.youtube.com/watch?v=gMM-d1uZ0Ks&t=12s)
 
-- It is recommended to clone [maendeleolab_vpc](https://youtu.be/SCcGe9pr5Z0) before cloning maendeleolab_subnet
+- Clone [maendeleolab_vpc](https://github.com/maendeleolab/maendeleolab_vpc)
 
 - It helps to be familiar with Linux basics commands.
 
