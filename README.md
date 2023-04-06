@@ -87,7 +87,7 @@ maendeleolab_lib.py
 
 **Notes: Your VPC must be tagged with the name "NetworkDev1" for the script to work, otherwise replace NetworkDev1 with your VPC name.**
 
-The script will create a subnet in two availability zones in us-east-1 and us-east-2 with their respective CIDR ranges.
+The script will create a subnet in two availability zones in us-east-1 and us-west-2 with their respective CIDR ranges.
 
 This script will become your single source of truth for your subnets. 
 
